@@ -7,7 +7,7 @@ Notre équipe de choc est composée de ces légendes vivantes (sauf Nathan) 👇
 - **Elouan Rival** 👑
 - **Baptiste Rousselot** 🚀
 - **Nathan Priano** 🎩
-- **Titouan-Lysandre André** 🌈
+- **Titouan-Lysandre André** 👷
 - **Jérémy Girard** 🧙‍♂️
 - **Marc Beriot** 🧑‍🍳
 - **Rafik Azzi** 🎮
