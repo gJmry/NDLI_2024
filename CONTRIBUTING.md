@@ -1,10 +1,4 @@
-Voici un fichier `CONTRIBUTING.md` en français, avec une présentation claire et agréable à lire, incluant des emojis pour rendre le tout plus dynamique :
-
----
-
 # Contribuer au projet ✨
-
-Merci de contribuer à ce projet ! Voici quelques règles simples à suivre pour garantir une collaboration fluide et un code propre. 
 
 ### 🌱 Création de Branche
 
