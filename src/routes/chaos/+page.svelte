@@ -1,5 +1,6 @@
 <script>
     import Popup from './Popup.svelte';
+    // import {form} from './form.svelte';
 
     let input1 = "";
     let input2 = "";
@@ -11,6 +12,8 @@
     let microPlasticCount = 10000;
     let interval;
     let isRunning = false;
+
+    let checkboxes = [false, false, false, false];
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -47,7 +50,7 @@
                 } else {
                     stopMicroPlasticCounter();
                 }
-            }, 50); // Change the speed as needed
+            }, 50);
         }
     }
 
@@ -55,6 +58,25 @@
         clearInterval(interval);
         isRunning = false;
     }
+
+    function restartMicroPlasticCounter() {
+        microPlasticCount = 0;
+    }
+
+    function toggleCheckbox() {
+        console.log(checkboxes);
+        for (let i = checkboxes.length - 1; i >= 0; i--) {
+            if (!checkboxes[i]) {
+                checkboxes[i] = true;
+            break;
+            } else {
+            checkboxes[i] = false;
+            }
+        }
+        
+        console.log(checkboxes);
+    }
+
 </script>
 
 <style>
@@ -117,6 +139,16 @@
     .stop:hover{
         background-color: #1de771;
     }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .checkbox-container label {
+        margin-left: 10px;
+    }
 </style>
 
 <form on:submit={handleSubmit}>
@@ -130,7 +162,7 @@
     <input id="input3" type="text" bind:value={input3} />
 
     <label for="input_décalé">3eme Prenom</label>
-    <input id="input_décalé" type="text" bind:value={input4} />
+    <input id="input_décalé" type="text" bind:value={input4} required />
 
     <label>
         Combien de micro particules de plastique ingère un humain par an ?
@@ -143,7 +175,30 @@
         <button type="button" class="counter-button start" on:click={startMicroPlasticCounter}>
             Start
         </button>
+        <button type="button" class="counter-button reset" on:click={restartMicroPlasticCounter}>
+            reset
+        </button>
     </div>
+
+    <label>Dans quel organe du corps retrouve-t-on du micro plastique ? Issus de la pollution des océans notamment</label>
+    <div class="checkbox-container">
+        <input type="checkbox" class="question_check" id="1" name="question_check" value={checkboxes[0]} checked={checkboxes[0]} disabled>
+        <label for="1">Poumon</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" class="question_check" id="2" name="question_check" value={checkboxes[1]} checked={checkboxes[1]} disabled>
+        <label for="2">Estomac</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" class="question_check" id="3" name="question_check" value={checkboxes[2]} checked={checkboxes[2]} disabled>
+        <label for="3">Testicule</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" class="question_check" id="4" name="question_check" value={checkboxes[3]} checked={checkboxes[3]} disabled>
+        <label for="4">Foie</label>
+    </div>
+    <button type="button" class="checkbox-button" on:click={() => toggleCheckbox()}>Toggle</button>
+
 
     <button type="submit">Submit</button>
 </form>
