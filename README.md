@@ -1,2 +1,28 @@
-# NDLI_2024
-This repository is dedicated to the Nuit de l'Info 2024 event. Nuit de l'Info is an annual programming challenge where participants collaborate to develop innovative solutions around a given theme. 
+# Couches Pour Adultes 🛋️👶
+
+### 🚨 Membres de l'équipe 🚨
+
+Notre équipe de choc est composée de ces légendes vivantes (sauf Nathan) 👇 :
+
+- **Elouan Rival** 👑
+- **Baptiste Marvin Tutel** 🚀
+- **Nathan Priano** 🎩
+- **Titouan-Lysandre André** 🌈
+- **Jérémy Girard** 🧙‍♂️
+- **Marc Beriot** 🧑‍🍳
+- **Rafik Azzi** 🎮
+- **Eliott Sauvaget** 🦸‍♂️
+
+Nous sommes prêts à tout pour créer quelque chose d'exceptionnel, alors préparez-vous à être époustouflé ! 💥
+
+### 🌙 Nuit de l'Info 2024
+
+Ce repository est **spécialement conçu** pour participer à la **Nuit de l'Info 2024** ! 🌟  
+Un défi de code, un marathon de créativité, et une chance de montrer à tout le monde qui est le meilleur groupe de programmeurs. (Spoiler : c’est nous) 😎
+
+### 💻 Ce qu'il y a ici...
+
+Ici, vous trouverez tout ce dont vous avez besoin pour notre projet incroyable. Il y a du code, de la bonne humeur et probablement quelques bugs (mais pas beaucoup, promis) 🐛.
+---
+
+**Couches Pour Adultes** — *Parce que notre code va vous donnez la chiasse* 👶
