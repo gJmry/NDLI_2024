@@ -23,6 +23,5 @@ Un défi de code, un marathon de créativité, et une chance de montrer à tout 
 ### 💻 Ce qu'il y a ici...
 
 Ici, vous trouverez tout ce dont vous avez besoin pour notre projet incroyable. Il y a du code, de la bonne humeur et probablement quelques bugs (mais pas beaucoup, promis) 🐛.
----
 
 **Couches Pour Adultes** — *Parce que notre code va vous donnez la chiasse* 👶
