@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Ramasseur de déchets",
+      "description": "Ramassez 10 déchets flottants lors de votre exploration.",
+      "icon": "🗑️"
+    },
+    {
+      "id": 2,
+      "name": "Maître des légendes marines",
+      "description": "Découvrez toutes les anecdotes cachées.",
+      "icon": "📜"
+    },
+    {
+      "id": 3,
+      "name": "Croisé écologique",
+      "description": "Accédez à toutes les pages éducatives sur la protection des océans.",
+      "icon": "🌱"
+    },
+    {
+      "id": 4,
+      "name": "À toute vitesse",
+      "description": "Naviguez pendant plus de 30 secondes sans vous arrêter.",
+      "icon": "⛵"
+    },
+    {
+      "id": 5,
+      "name": "Surfeur des vagues",
+      "description": "Faites avancer votre bateau en ligne droite pendant 30 secondes.",
+      "icon": "🌊"
+    }
+  ]
+  
