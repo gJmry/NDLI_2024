@@ -31,6 +31,12 @@ Une fois que vous avez effectué votre premier commit sur votre branche, **ouvre
 - Une fois la fusion effectuée sur `dev`, nous testerons les modifications.
 - Si tout fonctionne bien, nous fusionnons ensuite sur `main`.
 
+## En cas de merge conflict
+
+Soit vous êtes un grand garçon et vous apprenez à le faire
+Soit vous m'appelez et je vous montre comment le faire
+Soit je le fais sans vous apprendre et vous devenez une petite salope incompétente
+
 **Si vous avez des questions ou si quelque chose vous semble flou, n'hésitez pas à me demander, je suis un être humain normal qui peut répondre à des questions**
 
 ### 🎉 Merci de contribuer !
