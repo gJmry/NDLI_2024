@@ -1,6 +1,7 @@
 <script>
     export let isOpen = false;
     export let onClose;
+    export let onYes;
 </script>
 
 <style>
@@ -44,6 +45,7 @@
 
     .yes{
         background-color: lightgray;
+        margin-right: 80%;
     }
 
     .no{
@@ -60,8 +62,8 @@
         <div class="popup" on:click|stopPropagation>
             <p>Voulez-vous continuer ?</p>
             <div class="buttons">
-                <button class="yes" type="button" on:click={onClose}>Envoyé</button>
-                <button class="no" type="button" on:click={onClose}>Ne pas envoyé</button>
+                <button class="yes" type="button" on:click={onYes}>yes</button>
+                <button class="no" type="button" on:click={onClose}>non</button>
             </div>
         </div>
     </div>
