@@ -5,6 +5,7 @@
 Pour chaque nouvelle fonctionnalité ou correction de bug, vous devez créer une **branche** dédiée. Cela permet de mieux organiser le code et de garder `dev` et `main` propres.
 
 Les **noms des branches** doivent suivre le format suivant :
+
 - **feature/lenomdutruc** : pour une nouvelle fonctionnalité.
 - **fix/lenomdutruc** : pour corriger un bug.
 
@@ -17,8 +18,10 @@ Les **commits** doivent être clairs et concis. Nous utilisons des **préfixes**
 - **chore** : pour des tâches diverses qui ne modifient pas le code fonctionnel, comme la mise à jour des dépendances. Exemple : `chore: mise à jour de la documentation`
 
 #### Option Extra 💅 :
-Si vous êtes vraiment *extra sexy*, vous pouvez ajouter un **Gitmoji** pour rendre le message encore plus fun ! 🎉
+
+Si vous êtes vraiment _extra sexy_, vous pouvez ajouter un **Gitmoji** pour rendre le message encore plus fun ! 🎉
 Voici quelques exemples :
+
 - ✨ `feat: ajout de la nouvelle fonctionnalité`
 - 🐛 `fix: correction d'un bug`
 - 🧑‍💻 `chore: mise à jour des dépendances`
@@ -27,7 +30,7 @@ Voici quelques exemples :
 
 Une fois que vous avez effectué votre premier commit sur votre branche, **ouvrez une pull request (PR)** vers la branche `dev`. Ce sera la branche sur laquelle on testera vos changements.
 
-- Si la PR est **megeable**, nous procéderons à la fusion.
+- Si la PR est **mergeable**, nous procéderons à la fusion.
 - Une fois la fusion effectuée sur `dev`, nous testerons les modifications.
 - Si tout fonctionne bien, nous fusionnons ensuite sur `main`.
 
