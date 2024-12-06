@@ -1,5 +1,10 @@
 <script>
     import Popup from './Popup.svelte';
+    import {achievements} from "$lib/store.js";
+
+    function toggleAchievement(id) {
+        $achievements[id].completed = true;
+    }
 
     let input1 = "";
     let input2 = "";
@@ -38,6 +43,7 @@
     function submitForm() {
         console.log("Form submitted with values:", { input1, input2, input3, input4, microPlasticCount });
         closePopup();
+        toggleAchievement(5);
     }
 
     function startMicroPlasticCounter() {
