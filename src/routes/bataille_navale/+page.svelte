@@ -8,21 +8,23 @@
         <p class="text-secondary-700">Trouvez leur navires et réduisez les à néant !</p>
     </div>
 
-    <div id="cell-container">
-    {#each {length: 10} as _, i}
-        <div class="row">
-        {#each {length: 10} as _, j}
-            <div class="bg-primary-500 cell">
+    <div id="center-container">
+        <div id="cell-container">
+        {#each {length: 10} as _, i}
+            <div class="row">
+            {#each {length: 10} as _, j}
+                <div class="bg-primary-500 cell">
+                </div>
+            {/each}
             </div>
         {/each}
         </div>
-    {/each}
+
+        <div id="result" class="bg-secondary-500">
+            <p class="bg-secondary-100"></p>
+        </div>
     </div>
 
-    
-    <div id="result">
-        <p></p>
-    </div>
     <div id="actions">
         <button class="bg-warning-500">Recommencer</button>
         <button class="bg-error-500">JSP</button>
@@ -62,6 +64,7 @@
         let trials = [];
 
         const cells = document.getElementsByClassName("cell");
+        const result = document.getElementById("result").children[0];
 
         for(let i = 0; i < 100; i++){
             cells[i].addEventListener("click", function(){
@@ -73,25 +76,29 @@
                         switch(board[i]){
                             case "torpilleur":
                                 torpilleur--;
-                                torpilleur == 0 ? destroyed=true : destroyed=false;
+                                torpilleur == 0 ? destroyed="Torpilleur" : destroyed="none";
                                 break
                             case "sousMarin":
                                 sousMarin--;
+                                sousMarin == 0 ? destroyed="Sous Marin" : destroyed="none";
                                 break
                             case "contreTorpilleur":
                                 contreTorpilleur--;
+                                contreTorpilleur == 0 ? destroyed="Contre Torpilleur" : destroyed="none";
                                 break
                             case "croiseur":
                                 croiseur--;
+                                croiseur == 0 ? destroyed="Croiseur" : destroyed="none";
                                 break
                             case "porteAvion":
                                 porteAvion--;
+                                porteAvion == 0 ? destroyed="Porte Avion" : destroyed="none";
                                 break
                             default:
                                 break
                         }
-                        if(destroyed){
-                            
+                        if(destroyed != "none"){
+                            result.innerText = "Le " + destroyed + " a été détruit";
                         }
                         img.src = "./bataille_navale/fire.svg";
                     }else{
