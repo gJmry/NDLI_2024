@@ -36,7 +36,7 @@
 
     <div id="actions">
         <button id="reset" class="bg-warning-500">Recommencer</button>
-        <a id="back" class="bg-error-500" href="/home">Retour</a>
+        <a id="back" class="bg-error-500" href="/">Retour</a>
     </div>
 </div>
 
