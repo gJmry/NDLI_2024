@@ -13,7 +13,7 @@
 
 <div id="page">
     <div id="title">
-        <h1 class="text-tertiary-500">Une nation ennemie vous attaque !</h1>
+        <h1 class="text-tertiary-500">CAPTCHA : Une nation ennemie vous attaque !</h1>
         <p class="text-secondary-700">Trouvez leur navires et réduisez les à néant !</p>
     </div>
 
@@ -126,7 +126,7 @@
                                     result.innerText = "Mission : Nettoyer les débris";
                                     this.removeEventListener("click", torpedo())
                                     messCleaning();
-                                },10000)
+                                },8000)
                             }
                         }
                     }else{
