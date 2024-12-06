@@ -25,15 +25,7 @@
         submitCounter++;
 
         if (submitCounter % 3 === 0) {
-            console.log("Input 1:", input1);
-            console.log("Input 2:", input2);
-            console.log("Input 3:", input3);
-            console.log("Input 4:", input4);
-            console.log("Microplastics:", microPlasticCount);
-            console.log("Form submitted successfully on attempt number", submitCounter);
             showPopup = true;
-        } else {
-            console.log("Submit ignored. Attempt number", submitCounter);
         }
     }
 
