@@ -24,7 +24,20 @@
   onMount(fetchContributors);
 </script>
 
-<!-- Utilisation de Flexbox pour faire en sorte que les cartes occupent toute la place -->
+<div class="flex items-center flex-col p-4">
+  <h1 class="h1">
+    <span
+      class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
+      >Contributeurs.</span
+    >
+  </h1>
+  <h1 class="h1">
+    <span
+      class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
+      >By GitHub.</span
+    >
+  </h1>
+</div>
 <div class="w-full text-token flex flex-wrap justify-center gap-4 p-2">
   {#if contributors.length}
     {#each contributors as contributor}
@@ -37,14 +50,17 @@
           alt={contributor.login}
         />
         <h3 class="h3 text-center">{contributor.login}</h3>
+
+        <!-- Chips Skeleton UI -->
         <a
           href={contributor.html_url}
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-primary"
+          class="chip chip-primary chip-interactive rounded variant-soft bg-slate-200 hover:variant-filled flex items-center gap-2 hover:scale-105"
         >
-          Voir le profil GitHub
+          <span>Voir le profil Github</span>
         </a>
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
     {/each}
   {:else}
