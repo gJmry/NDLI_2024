@@ -57,6 +57,7 @@
         let croiseur = 4;
         let porteAvion = 5;
         let aliveNbr = 5;
+        let cleaned = 0;
 
         const board = [
             "none", "none", "contreTorpilleur", "contreTorpilleur", "contreTorpilleur", "none", "none", "none", "none", "none", 
@@ -76,6 +77,7 @@
         const cells = document.getElementsByClassName("cell");
         const result = document.getElementById("result").children[0];
         const winPopup = document.getElementById("win-popup");
+        const resetPopup = document.getElementById("reset-popup");
 
         for(let i = 0; i < 100; i++){
             cells[i].addEventListener("click", function torpedo(){
@@ -124,6 +126,7 @@
                     }else{
                         img.src = "./bataille_navale/cross-mark.svg";
                     }
+                    cleaned++;
                     this.appendChild(img);  
                     trials.push(i);
                 }
@@ -131,7 +134,10 @@
         }
 
         const reset = document.getElementById("reset");
-        reset.addEventListener("click", function(){
+        
+        reset.addEventListener("click", resetFunction());
+
+        function resetFunction(){
             if(aliveNbr > 0){
                 for(let i = 0; i < 100; i++){
                 if(cells[i].children[0] != undefined)
@@ -144,25 +150,32 @@
                 croiseur = 4;
                 porteAvion = 5;
                 aliveNbr = 5;
+                cleaned = 0;
                 trials = [];
             }else{
-
+                resetPopup.style.top = "300px";
+                setTimeout(()=>{
+                    resetPopup.style.top = "-150px";
+                },10000)
             }
-            
-        });
+        }
 
-        let cleaned = 0;
+        
         function messCleaning(){
-
             for(let i = 0; i < 100; i++){
-                addEventListener("click", function cleaning(){
-                    winPopup.style.top = "300px";
-                    setTimeout(()=>{
-                        winPopup.style.top = "-150px";
-                        result.innerText = "Mission : Nettoyer les débris";
-                        this.removeEventListener("click", torpedo())
-                        messCleaning();
-                    },10000)
+                cells[i].addEventListener("click", function cleaning(){
+                    if(cleaned != 0){
+                        if(cells[i].children[0] != undefined)
+                            cells[i].removeChild(cells[i].children[0])
+                        cleaned--;
+                        if(cleaned==0){
+                            this.removeEventListener("click", cleaning());
+                        }
+                    }else{
+                        aliveNbr = 5;
+                        let trials = [];
+                        resetFunction();
+                    }
                 })
             }
         }
