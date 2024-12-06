@@ -2,6 +2,15 @@
     @import './bataille_navale.css';
 </style>
 
+<div id="win-popup" class="bg-success-500 popup">
+    <p>Bravo vous avez triomphé.</p>
+    <p>MAINTENANT NETTOYEZ MOI CE BORDEL!</p>
+</div>
+
+<div id="noreset-popup" class="bg-success-500 popup">
+    <p>vous avez polué, vous devez assumer!</p>
+</div>
+
 <div id="page">
     <div id="title">
         <h1 class="text-tertiary-500">Une nation ennemie vous attaque !</h1>
@@ -26,8 +35,8 @@
     </div>
 
     <div id="actions">
-        <button class="bg-warning-500">Recommencer</button>
-        <button class="bg-error-500">JSP</button>
+        <button id="reset" class="bg-warning-500">Recommencer</button>
+        <a id="back" class="bg-error-500" href="/home">Retour</a>
     </div>
 </div>
 
@@ -47,6 +56,7 @@
         let contreTorpilleur = 3;
         let croiseur = 4;
         let porteAvion = 5;
+        let aliveNbr = 5;
 
         const board = [
             "none", "none", "contreTorpilleur", "contreTorpilleur", "contreTorpilleur", "none", "none", "none", "none", "none", 
@@ -65,12 +75,12 @@
 
         const cells = document.getElementsByClassName("cell");
         const result = document.getElementById("result").children[0];
+        const winPopup = document.getElementById("win-popup");
 
         for(let i = 0; i < 100; i++){
-            cells[i].addEventListener("click", function(){
+            cells[i].addEventListener("click", function torpedo(){
                 if(!trials.includes(i)){
-                    console.log(this);
-                    var img = document.createElement("img");
+                    let img = document.createElement("img");
                     if(board[i] != "none"){
                         let destroyed = false;
                         switch(board[i]){
@@ -97,10 +107,20 @@
                             default:
                                 break
                         }
+                        img.src = "./bataille_navale/fire.svg";
                         if(destroyed != "none"){
                             result.innerText = "Le " + destroyed + " a été détruit";
+                            aliveNbr--;
+                            if(aliveNbr==0){
+                                winPopup.style.top = "300px";
+                                setTimeout(()=>{
+                                    winPopup.style.top = "-150px";
+                                    result.innerText = "Mission : Nettoyer les débris";
+                                    this.removeEventListener("click", torpedo())
+                                    messCleaning();
+                                },10000)
+                            }
                         }
-                        img.src = "./bataille_navale/fire.svg";
                     }else{
                         img.src = "./bataille_navale/cross-mark.svg";
                     }
@@ -108,6 +128,43 @@
                     trials.push(i);
                 }
             });
+        }
+
+        const reset = document.getElementById("reset");
+        reset.addEventListener("click", function(){
+            if(aliveNbr > 0){
+                for(let i = 0; i < 100; i++){
+                if(cells[i].children[0] != undefined)
+                    cells[i].removeChild(cells[i].children[0])
+                }
+                result.innerText = "";
+                torpilleur = 2;
+                sousMarin = 3;
+                contreTorpilleur = 3;
+                croiseur = 4;
+                porteAvion = 5;
+                aliveNbr = 5;
+                trials = [];
+            }else{
+
+            }
+            
+        });
+
+        let cleaned = 0;
+        function messCleaning(){
+
+            for(let i = 0; i < 100; i++){
+                addEventListener("click", function cleaning(){
+                    winPopup.style.top = "300px";
+                    setTimeout(()=>{
+                        winPopup.style.top = "-150px";
+                        result.innerText = "Mission : Nettoyer les débris";
+                        this.removeEventListener("click", torpedo())
+                        messCleaning();
+                    },10000)
+                })
+            }
         }
     });
 </script>
