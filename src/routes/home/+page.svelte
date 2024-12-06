@@ -1,5 +1,9 @@
+<script>
+    import facts from '$lib/facts.json';
+</script>
+
+
 <div class="flex flex-col min-h-screen bg-surface-500">
-    <script src="https://kit.fontawesome.com/ff535060ef.js" crossorigin="anonymous"></script>
     <header class="bg-primary-500 text-white py-4 shadow-md">
         <div class="logo-cloud grid-cols-1 lg:!grid-cols-3 gap-1 mx-8 space-x-8">
             <a class="logo-item" href="/">
@@ -17,11 +21,17 @@
         </div>
     </header>
 
-    <div class="flex flex-row">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi laboriosam quisquam eaque, eius unde. Ducimus nobis quidem excepturi? Reiciendis, illum inventore. Impedit commodi est, eos aliquam sunt harum vero.</p>
-        <div class="flex flex-col w-36 h-36">
-            <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONglDk8Z5Fvbgeejieub9bZDsDMMjBWVEtQ&s"/>
-        </div>
-    </div>
-
+    <main class="flex flex-col space-y-8 px-8">
+        {#each facts as fact, i}
+            <div class="flex items-center space-x-4 {fact.imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse'}">
+                <div class="flex flex-col w-36 h-36">
+                    <img alt={fact.title} src={fact.image} />
+                </div>
+                <div class="text-content">
+                    <h2 class="text-xl font-bold">{fact.title}</h2>
+                    <p>{fact.content}</p>
+                </div>
+            </div>
+        {/each}
+    </main>
 </div>
