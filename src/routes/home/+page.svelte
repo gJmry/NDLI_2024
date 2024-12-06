@@ -28,9 +28,10 @@
     <div class="content-wrapper">
         <main class="flex flex-col space-y-8 px-8 py-8">
             {#each facts as fact, i}
-                <div class="flex items-center space-x-4 {fact.imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse'}">
-                    <div class="flex flex-col w-36 h-36">
-                        <img alt={fact.title} src={fact.image} />
+                <div class=" flex items-center space-x-4 {fact.imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse'}">
+                    <div class="image-container flex flex-col w-36 h-36">
+                        <i class="{fact.image} fa-2xl"></i>
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
                     </div>
                     <div class="text-content">
                         <h2 class="text-xl font-bold">{fact.title}</h2>
@@ -76,34 +77,42 @@
     }
   
     /* Conteneur pour le contenu fixe */
-    .content-wrapper {
-      position: relative;
-      z-index: 10;  /* Contenu principal au-dessus des bulles */
-      padding-top: 20px; /* Ajout d'un padding pour donner de l'espace en haut */
-    }
-  
-    /* Wrapper des bulles en arrière-plan */
-    .wrapper {
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;  /* Bulles en arrière-plan */
-      pointer-events: none;  /* Empêche l'interaction avec les bulles */
-    }
-  
-    /* Positionnement des bulles */
-    .wrapper div {
-      height: 60px;
-      width: 60px;
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
-      position: absolute;
-      animation: animate 8s linear infinite;
-      z-index: 0; /* Bulles derrière le contenu */
-    }
+    .ocean-background {
+    background: linear-gradient(to bottom, #1e3c72, #1151c0); /* dégradé bleu de l'océan */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Conteneur pour le contenu fixe */
+.content-wrapper {
+    position: relative;
+    z-index: 10;  /* Contenu principal au-dessus des bulles */
+    padding-top: 20px;
+}
+
+/* Wrapper des bulles en arrière-plan */
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Positionnement des bulles */
+.wrapper div {
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    animation: animate 8s linear infinite;
+    z-index: 0;
+}
   
     /* Définition de l'animation des bulles */
     @keyframes animate {
@@ -203,50 +212,72 @@
       animation-duration: 9s;
     }
   
-    /* Amélioration du header */
-    header {
-      background: linear-gradient(135deg, rgb(3, 59, 119) 0%, rgba(0, 204, 255, 1) 100%);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      z-index: 20;  /* Assure que le header reste au-dessus */
-      position: relative;  /* Positionnement relatif pour s'assurer qu'il est devant */
-    }
+/* Style pour la barre de navigation */
+header {
+    background: linear-gradient(135deg, rgb(3, 59, 119) 0%, rgba(0, 204, 255, 1) 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    z-index: 20;
+    position: relative;
+}
   
-    .logo-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s ease;
-    }
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.logo-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-cloud {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 2rem;
+}
   
-    .logo-item:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  
-    /* Styles des éléments textuels */
-    .text-content {
-      color: white;
-    }
-  
-    .text-content h2 {
-      color: white;
-    }
-  
-    .text-content p {
-      color: white;
-    }
-  
-    /* Système de grid pour les items du header */
-    .logo-cloud {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
+.text-content {
+    color: white;
+    max-width: 70%;
+}
+
+.text-content h2 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.text-content p {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+div.text-content{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+div.text-content:nth-child(2n){
+    justify-content: flex-end;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   </style>
   

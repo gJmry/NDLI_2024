@@ -1,63 +1,56 @@
 [
-    {
-      "image": "image1.jpg",
-      "imagePosition": "left",
-      "title": "La pollution plastique",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus ac erat ultrices tempor. Suspendisse potenti."
-    },
-    {
-      "image": "image2.jpg",
-      "imagePosition": "right",
-      "title": "L'acidification des océans",
-      "content": "Nullam at est vitae enim fermentum euismod. Praesent sollicitudin consectetur lectus, vel eleifend arcu pellentesque non."
-    },
-    {
-      "image": "image3.jpg",
-      "imagePosition": "left",
-      "title": "Les zones mortes",
-      "content": "Proin feugiat lacus nec velit varius, non hendrerit libero facilisis. Morbi auctor magna nec justo volutpat, non sodales turpis facilisis."
-    },
-    {
-      "image": "image4.jpg",
-      "imagePosition": "right",
-      "title": "La surpêche",
-      "content": "Donec vitae lorem at ligula dictum dapibus. Quisque commodo odio sed orci malesuada, sed viverra ligula facilisis."
-    },
-    {
-      "image": "image5.jpg",
-      "imagePosition": "left",
-      "title": "Les coraux en danger",
-      "content": "Pellentesque eget dui euismod, suscipit magna nec, vehicula enim. Ut fringilla sapien nec ligula lacinia, nec fringilla mi posuere."
-    },
-    {
-      "image": "image6.jpg",
-      "imagePosition": "right",
-      "title": "Les microplastiques",
-      "content": "Nam accumsan mauris et tortor ultrices, vel suscipit magna convallis. Suspendisse potenti. Cras ultricies ipsum vel ligula cursus feugiat."
-    },
-    {
-      "image": "image7.jpg",
-      "imagePosition": "left",
-      "title": "Les récifs artificiels",
-      "content": "Etiam at velit ac eros cursus hendrerit. Aliquam vehicula ipsum ac risus volutpat, non vestibulum erat eleifend."
-    },
-    {
-      "image": "image8.jpg",
-      "imagePosition": "right",
-      "title": "L'importance du phytoplancton",
-      "content": "Morbi ut nulla at ipsum hendrerit feugiat nec id risus. Phasellus in quam vel lacus vehicula fermentum."
-    },
-    {
-      "image": "image9.jpg",
-      "imagePosition": "left",
-      "title": "La montée des températures",
-      "content": "Vestibulum fringilla metus at libero pellentesque, sed tristique purus fermentum. Duis id turpis et lacus ultricies fringilla."
-    },
-    {
-      "image": "image10.jpg",
-      "imagePosition": "right",
-      "title": "La biodiversité marine",
-      "content": "Curabitur vitae orci sed nisi dignissim fermentum. Cras efficitur velit id sapien lacinia, sed porttitor augue scelerisque."
-    }
-  ]
-  
+  {
+    "image": "fa-solid fa-bottle-water",
+    "imagePosition": "left",
+    "title": "La pollution plastique menace les océans",
+    "content": "Chaque année, plus de 8 millions de tonnes de plastique se retrouvent dans les océans. Ce plastique s'accumule dans des zones spécifiques, telles que le vortex du Pacifique, où il forme des masses flottantes dangereuses pour la faune marine. Les animaux marins, tels que les tortues, les poissons et les oiseaux, ingèrent souvent ces déchets plastiques, ce qui peut provoquer des blessures graves et la mort. Il est crucial de réduire notre consommation de plastique à usage unique et d'encourager le recyclage."
+  },
+  {
+    "image": "fa-solid fa-water",
+    "imagePosition": "right",
+    "title": "L'acidification des océans affecte la vie marine",
+    "content": "L'acidification des océans est un phénomène où les océans absorbent une partie du dioxyde de carbone (CO2) présent dans l'atmosphère, ce qui modifie leur pH. Depuis la révolution industrielle, le pH des océans a diminué de 0,1 unité, entraînant une série de conséquences pour la vie marine. Les coquilles et squelettes de nombreuses espèces marines, notamment les coraux et les mollusques, se fragilisent en raison de l'acidité accrue. Cela perturbe l'écosystème marin et menace la biodiversité."
+  },
+  {
+    "image": "fa-solid fa-skull-crossbones",
+    "imagePosition": "left",
+    "title": "Les zones mortes privent la vie marine d'oxygène",
+    "content": "Les zones mortes marines sont des régions où le niveau d'oxygène est insuffisant pour soutenir la vie animale. Ces zones sont principalement causées par la pollution de l'eau, en particulier les excès de nutriments provenant des engrais agricoles, qui stimulent la prolifération d'algues. Ces algues consomment tout l'oxygène disponible lorsqu'elles se décomposent, créant des environnements où les poissons et autres formes de vie marine ne peuvent pas survivre. Plus de 500 zones mortes ont été identifiées dans les océans."
+  },
+  {
+    "image": "fa-solid fa-fish",
+    "imagePosition": "right",
+    "title": "La surpêche menace les stocks de poissons",
+    "content": "La surpêche est un problème majeur pour les océans. Actuellement, environ 33% des stocks mondiaux de poissons sont exploités à des niveaux insoutenables, ce qui menace non seulement la biodiversité marine, mais aussi les économies qui dépendent de la pêche. La surexploitation de certaines espèces, comme le thon ou le cabillaud, a conduit à leur déclin rapide. Des pratiques de pêche durables sont essentielles pour préserver les écosystèmes marins et assurer la survie des espèces de poissons."
+  },
+  {
+    "image": "fa-solid fa-coral",
+    "imagePosition": "left",
+    "title": "Les coraux sont essentiels à la biodiversité marine",
+    "content": "Les récifs coralliens abritent environ 25% de toute la biodiversité marine, malgré qu'ils ne couvrent que 0,1% de la surface des océans. Ces écosystèmes fournissent un abri et une source de nourriture pour des milliers d'espèces marines. Cependant, les récifs coralliens sont gravement menacés par le réchauffement des océans, l'acidification, la pollution et la pêche destructive. La perte de récifs coralliens aurait des effets dévastateurs sur la faune marine et les communautés humaines qui dépendent des récifs pour leur subsistance."
+  },
+  {
+    "image": "fa-solid fa-dna",
+    "imagePosition": "right",
+    "title": "Les microplastiques envahissent les écosystèmes marins",
+    "content": "Les microplastiques, qui sont des particules de plastique de moins de 5 mm, envahissent désormais presque tous les écosystèmes marins. Ils sont présents dans l'eau de mer, les sédiments et dans les organismes marins, de l'eau aux poissons. Ces microplastiques sont ingérés par de nombreuses espèces marines, perturbant leur santé et leur reproduction. Leur présence dans la chaîne alimentaire représente également un risque pour la santé humaine, car ils peuvent se retrouver dans nos aliments, tels que les fruits de mer."
+  },
+  {
+    "image": "fa-solid fa-archway",
+    "imagePosition": "left",
+    "title": "Les récifs artificiels favorisent la biodiversité marine",
+    "content": "Les récifs artificiels, créés par l'homme à partir de structures sous-marines comme des navires coulés ou des rochers, peuvent soutenir une biodiversité marine similaire à celle des récifs coralliens naturels. Ils servent de refuges et de zones de reproduction pour de nombreuses espèces marines, en particulier là où les habitats naturels ont été détruits. Les récifs artificiels sont également utilisés pour protéger les côtes contre l'érosion et pour améliorer la pêche locale."
+  },
+  {
+    "image": "fa-solid fa-leaf",
+    "imagePosition": "right",
+    "title": "Le phytoplancton est la base de la chaîne alimentaire marine",
+    "content": "Le phytoplancton joue un rôle clé dans l'écosystème marin. Ces organismes microscopiques sont responsables de la production de 50% de l'oxygène que nous respirons et constituent la base de la chaîne alimentaire océanique. Le phytoplancton est également essentiel pour réguler le climat en absorbant une grande partie du CO2 de l'atmosphère. La santé du phytoplancton est donc directement liée à la santé globale des océans et à l'équilibre climatique."
+  },
+  {
+    "image": "fa-solid fa-thermometer-half",
+    "imagePosition": "left",
+    "title": "Les températures mondiales affectent la vie marine",
+    "content": "Le réchauffement climatique entraîne une élévation de la température des océans, un phénomène qui a des effets catastrophiques sur les écosystèmes marins. La hausse de la température des océans provoque des événements de blanchissement des coraux, où les coraux perdent leurs couleurs et leur capacité à se nourrir, ce qui les rend vulnérables aux maladies. Les poissons et autres espèces marines doivent également migrer vers des zones plus fraîches, perturbant les écosystèmes marins et les communautés humaines qui dépendent de ces ressources."
+  }
+]
