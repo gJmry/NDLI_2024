@@ -2,7 +2,9 @@
     import {onMount} from "svelte";
     import {achievements} from "$lib/store.js";
     import "../app.css";
+    import {writable} from "svelte/store";
 
+    let achievedAchievements = writable([]);
     let {children} = $props();
 
     let visible = $state(false);
@@ -24,11 +26,19 @@
 
     $effect(() => {
         $achievements.forEach((achievement) => {
-            if (achievement.completed) {
-                displaySuccessAlert(achievement);
-            }
+            achievedAchievements.update((currentAchieved) => {
+                const currentAchievements = localStorage.getItem('achievedAchievements')
+                if (currentAchievements === null || achievement.completed && !currentAchievements.includes(achievement.id)) {
+                    displaySuccessAlert(achievement);
+                    const updatedAchieved = [...currentAchieved, achievement.id];
+                    localStorage.setItem('achievedAchievements', JSON.stringify(updatedAchieved));
+                    return updatedAchieved;
+                }
+                return currentAchieved;
+            });
         });
     });
+
 
     onMount(() => {
         const storedAchievements = localStorage.getItem('achievements');
