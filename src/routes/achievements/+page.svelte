@@ -1,5 +1,17 @@
 <script>
     import {achievements} from "$lib/store.js";
+
+    function toggleAchievement(id) {
+        $achievements[id].completed = true;
+    }
+
+    function activer(){
+        toggleAchievement(2);
+    }
+
+    function retirer(){
+        $achievements[2].completed = false;
+    }
 </script>
 
 <main class="min-h-screen p-6 bg-secondary-400">
