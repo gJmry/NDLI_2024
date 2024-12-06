@@ -1,0 +1,79 @@
+#page{
+    /* width: 100vw;
+    height: 100vh; */
+    margin: 0;
+    padding: 0;
+}
+
+#title{
+    margin: 30px 0;
+}
+
+#title h1{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#title p{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+#cell-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell{
+    width: 50px;
+    height: 50px;
+    border: solid 1px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell > img{
+    width: 80%;
+    height: 80%;
+}
+
+.cell:hover{
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+#actions{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#actions button{
+    width: 120px;
+    height: 40px;
+    padding: 25px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+

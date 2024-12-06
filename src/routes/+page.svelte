@@ -1,3 +1,5 @@
-<div class="bg-surface-500 min-h-screen flex justify-center items-center">
-    CACA PROUT
-</div>
+<script>
+    import Ocean from "../components/ocean/Ocean.svelte";
+</script>
+
+<Ocean />
