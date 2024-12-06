@@ -87,7 +87,9 @@
 
         for(let i = 0; i < 100; i++){
             cells[i].addEventListener("click", function torpedo(){
+                let resultString = "";
                 if(!trials.includes(i)){
+                    resultString = "Touché";
                     let img = document.createElement("img");
                     if(board[i] != "none"){
                         let destroyed = false;
@@ -117,7 +119,7 @@
                         }
                         img.src = "./bataille_navale/fire.svg";
                         if(destroyed != "none"){
-                            result.innerText = "Le " + destroyed + " a été détruit";
+                            resultString = "Le " + destroyed + " a été détruit";
                             aliveNbr--;
                             if(aliveNbr==0){
                                 winPopup.style.top = "300px";
@@ -129,7 +131,9 @@
                                 },8000)
                             }
                         }
+                        result.innerText = resultString;
                     }else{
+                        result.innerText = "Raté";
                         img.src = "./bataille_navale/cross-mark.svg";
                     }
                     cleaned++;
