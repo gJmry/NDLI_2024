@@ -3,37 +3,37 @@
       "image": "image1.jpg",
       "imagePosition": "left",
       "title": "La pollution plastique",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus ac erat ultrices tempor. Suspendisse potenti."
+      "content": "Les micros plastiques issus de la décomposition du plastique dans l'océan se retrouve partout dans la nature."
     },
     {
       "image": "image2.jpg",
       "imagePosition": "right",
       "title": "L'acidification des océans",
-      "content": "Nullam at est vitae enim fermentum euismod. Praesent sollicitudin consectetur lectus, vel eleifend arcu pellentesque non."
+      "content": "Plus l'eau est acide, plus les organismes marins ont du mal à former leur coquille. Entrainant une diminution de la biodiversité."
     },
     {
       "image": "image3.jpg",
       "imagePosition": "left",
-      "title": "Les zones mortes",
-      "content": "Proin feugiat lacus nec velit varius, non hendrerit libero facilisis. Morbi auctor magna nec justo volutpat, non sodales turpis facilisis."
+      "title": "The SeaCleaner",
+      "content": "The SeaCleaner est une association luttant contre la pollutions des océans. Ils possèdent même des bateaux anti plastique"
     },
     {
       "image": "image4.jpg",
       "imagePosition": "right",
-      "title": "La surpêche",
-      "content": "Donec vitae lorem at ligula dictum dapibus. Quisque commodo odio sed orci malesuada, sed viverra ligula facilisis."
+      "title": "Corp et Océan",
+      "content": "L'Ocean et le corp humains sont tous deux pollués aux micro plastiques. Un mode de vie respéctueux de l'océan ne sera que bénéfique pour votre santé."
     },
     {
       "image": "image5.jpg",
       "imagePosition": "left",
       "title": "Les coraux en danger",
-      "content": "Pellentesque eget dui euismod, suscipit magna nec, vehicula enim. Ut fringilla sapien nec ligula lacinia, nec fringilla mi posuere."
+      "content": "La probabilité que les coraux d'eau peu profonde soient touchés par des maladies, augmente de 4 à 89% suite à un contact avec du plastique. Il en va de même pour les risques de cancer"
     },
     {
       "image": "image6.jpg",
       "imagePosition": "right",
-      "title": "Les microplastiques",
-      "content": "Nam accumsan mauris et tortor ultrices, vel suscipit magna convallis. Suspendisse potenti. Cras ultricies ipsum vel ligula cursus feugiat."
+      "title": "Les tortues de mer",
+      "content": "85 % des tortues marines ont ingéré des déchets plastiques issus de notre consommation courante."
     },
     {
       "image": "image7.jpg",
