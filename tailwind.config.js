@@ -1,5 +1,5 @@
 // @ts-check
-import { ocean_theme } from './ocean_theme.js'
+import { ocean_theme } from './ocean_theme.ts'
 import { join } from 'path';
 
 // 1. Import the Skeleton plugin
