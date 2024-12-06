@@ -42,7 +42,13 @@
 
 
 <script>
+
+    import {achievements} from "$lib/store.js";
     import { onMount } from "svelte";
+
+    function toggleAchievement(id) {
+        $achievements[id].completed = true;
+    }
 
     // 1 porte avion (5 cases) 
     // 1 croiseur (4 cases) 
@@ -172,9 +178,12 @@
                             this.removeEventListener("click", cleaning());
                         }
                     }else{
-                        aliveNbr = 5;
-                        let trials = [];
-                        resetFunction();
+                        toggleAchievement(6);
+                        setTimeout(()=>{
+                            aliveNbr = 5;
+                            let trials = [];
+                            resetFunction();
+                        }, 6000)
                     }
                 })
             }

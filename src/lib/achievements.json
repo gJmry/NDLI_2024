@@ -40,6 +40,13 @@
     "description": "Réussir à soumettre le pire formulaire existant",
     "icon": "\uD83E\uDDD0",
     "completed": false
+  },
+  {
+    "id": 6,
+    "name": "Armada",
+    "description": "Réussir le CAPTCHA et nettoyer derrière sois",
+    "icon": "\uD83E\uDDD0",
+    "completed": false
   }
 ]
   
