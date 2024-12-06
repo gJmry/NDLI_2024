@@ -5,18 +5,22 @@
 
 <div class="flex flex-col min-h-screen bg-surface-500">
     <header class="bg-primary-500 text-white py-4 shadow-md">
-        <div class="logo-cloud grid-cols-1 lg:!grid-cols-3 gap-1 mx-8 space-x-8">
-            <a class="logo-item" href="/">
+        <div class="logo-cloud grid-cols-1 lg:!grid-cols-4 gap-1 mx-8 space-x-1">
+            <a class="logo-item" href="/chaos">
                 <i class="fa-solid fa-circle-question"></i>
                 <span>Quizz</span>
             </a>
-            <a class="logo-item" href="/">
+            <a class="logo-item" href="/bataille_navale">
                 <i class="fa-solid fa-ship"></i>
                 <span>Bataille navale</span>
             </a>
-            <a class="logo-item" href="/">
+            <a class="logo-item" href="/credits">
                 <i class="fa-solid fa-address-card"></i>
                 <span>Credit</span>
+            </a>
+            <a class="logo-item" href="/achievements">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Succès</span>
             </a>
         </div>
     </header>
@@ -35,3 +39,9 @@
         {/each}
     </main>
 </div>
+
+
+<style>
+
+
+</style>
