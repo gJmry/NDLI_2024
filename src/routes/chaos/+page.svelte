@@ -88,8 +88,7 @@
 </script>
 
 <style>
-    .bounds {
-  border: 5px red solid;
+.bounds {
   width: 200px;
   height: 300px;
 }
@@ -113,6 +112,7 @@
 }
 
 .image {
+    background-color: azure;
   animation-name: hor-movement, ver-movement;
   animation-duration: 3.141s, 1.414s;
   animation-iteration-count: infinite;
