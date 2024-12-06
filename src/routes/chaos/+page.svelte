@@ -1,12 +1,17 @@
 <script>
     import Popup from './Popup.svelte';
 
+    const maxAge = 110;
     let input1 = "";
     let input2 = "";
     let input3 = "";
     let input4 = "";
     let submitCounter = 0;
     let showPopup = false;
+    let startTime = 0;
+    let endTime = 0;
+    let result = null;
+    let progress = 0;
 
     let microPlasticCount = 10000;
     let interval;
@@ -55,9 +60,36 @@
         clearInterval(interval);
         isRunning = false;
     }
+
+    function handleMouseDown() {
+        startTime = Date.now();
+    }
+
+    function handleMouseUp() {
+        endTime = Date.now();
+        const duration = (endTime - startTime) / 1000;
+        result = calculateValue(duration);
+        progress = result/1000 * 100;
+    }
+
+    function calculateValue(duration) {
+        return Math.round(((Math.exp(duration*5)%110)/100)*110);
+    }
 </script>
 
 <style>
+    .test {
+        padding: 10px 20px;
+        position: relative;
+        width: 200px;
+        height: 50px;
+        background: none;
+        border-radius: 25px;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -145,6 +177,12 @@
         </button>
     </div>
 
+    <label>Visez votre âge</label>
+    <input type="button" class="test"
+        bind:value={result}
+        on:mousedown={handleMouseDown}
+        on:mouseup={handleMouseUp}/>
+    <ProgressBar value={progress} max={maxAge} />
     <button type="submit">Submit</button>
 </form>
 
